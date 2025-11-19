@@ -13,7 +13,7 @@ from setuptools.command.build_ext import build_ext
 
 # TODO: find from extras maybe
 HOST_MLIR_PYTHON_PACKAGE_PREFIX = os.environ.get(
-    "HOST_MLIR_PYTHON_PACKAGE_PREFIX", "mlir-aie"
+    "HOST_MLIR_PYTHON_PACKAGE_PREFIX", "aie"
 )
 PACKAGE_NAME = f"{HOST_MLIR_PYTHON_PACKAGE_PREFIX.replace('.', '-').replace('_', '-')}-python-extras"
 
@@ -54,7 +54,7 @@ class CMakeBuild(build_ext):
     def build_extension(self, ext: CMakeExtension) -> None:
         pass
 
-version_s = "8.3"
+version_s = "0.0.8.3"
 
 packages = (
     [HOST_MLIR_PYTHON_PACKAGE_PREFIX]
