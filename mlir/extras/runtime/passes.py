@@ -958,7 +958,10 @@ class Pipeline:
         return self
 
     def buffer_results_to_out_params(
-        self, add_result_attr: bool = None, hoist_static_allocs: bool = None
+        self,
+        add_result_attr: bool = None,
+        hoist_static_allocs: bool = None,
+        modify_public_functions: bool = None,
     ):
         """Converts memref-typed function results to out-params
 
@@ -994,6 +997,7 @@ class Pipeline:
             "buffer-results-to-out-params",
             add_result_attr=add_result_attr,
             hoist_static_allocs=hoist_static_allocs,
+            modify_public_functions=modify_public_functions,
         )
         return self
 
